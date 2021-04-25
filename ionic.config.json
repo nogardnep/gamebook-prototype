@@ -1,5 +1,8 @@
 {
   "name": "gamebook-prototype",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }

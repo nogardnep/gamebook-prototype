@@ -1,0 +1,15 @@
+<div *ngIf="player">
+  <h2>Player</h2>
+  <div>name: {{player.name}}</div>
+  <nav>
+    <h3>Objects:</h3>
+    <ul>
+      <li *ngFor="let key of player.objects">
+        {{ getObject(key).getName() }}
+      </li>
+    </ul>
+  </nav>
+</div>
+<div *ngIf="!player">
+  <p>No player is loaded</p>
+</div>

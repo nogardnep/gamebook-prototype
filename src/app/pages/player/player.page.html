@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>player</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <button (click)="onClickExit()">Back to story</button>
+
+  <div *ngIf="play">
+    <component-player [player]="play.player"></component-player>
+  </div>
+
+</ion-content>

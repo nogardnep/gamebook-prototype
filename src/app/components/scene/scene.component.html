@@ -1,0 +1,20 @@
+<h2>Scene</h2>
+<div *ngIf="scene">
+  <h3>{{scene.getName()}}</h3>
+  <p *ngFor="let paragraph of scene.getDescription()">
+    {{paragraph}}
+  </p>
+  <figure *ngIf="scene.getImage()">
+    <img [src]="getImagePath(scene.getImage())" alt="" style="max-height: 200px;" />
+  </figure>
+  <nav>
+    <ul>
+      <li *ngFor="let action of scene.getActions()">
+        <button (click)="onClickAction(action)">{{action.text}}</button>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div *ngIf="!scene">
+  <p>No scene is loaded</p>
+</div>

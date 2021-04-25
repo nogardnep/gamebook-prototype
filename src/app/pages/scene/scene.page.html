@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>scene</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="scene">
+    <h2>Scene</h2>
+    <h3>{{scene.name}}</h3>
+    <p *ngFor="let paragraph of scene.paragraphs">
+      {{paragraph}}
+    </p>
+    <nav>
+      <ul>
+        <li *ngFor="let action of scene.actions">
+          <button (click)="onClickAction(action)">{{action.text}}</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div *ngIf="!scene">
+    <p>No scene is loaded</p>
+  </div>
+</ion-content>

@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS scene(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(255),
+    description TEXT
+);

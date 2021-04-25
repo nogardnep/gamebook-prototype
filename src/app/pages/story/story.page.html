@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>story</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <button (click)="onClickHome()">Home</button>
+  <button (click)="onClickPlayer()">Player</button>
+
+  <div *ngIf="play">
+    <app-scene [sceneKey]="play.currentSceneKey"></app-scene>
+  </div>
+
+</ion-content>
